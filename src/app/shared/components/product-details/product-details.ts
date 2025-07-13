@@ -16,7 +16,6 @@ import {MatOption} from '@angular/material/core';
 })
 
 export class ProductDetails {
-  // données du produit
   plantName = 'Monstera Deliciosa';
   plantLatinName = 'Monstera deliciosa';
   imageUrl = 'https://images.unsplash.com/photo-1545165375-1b744b9ed444?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
