@@ -1,0 +1,72 @@
+$navbar-bg: #dadada;
+$text-color: #000000;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(207, 207, 207, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.logo img {
+  height: 50px;
+  transition: transform .2s;
+  &:hover { transform: scale(1.05); }
+}
+
+.nav-menu {
+  ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  li {
+    position: relative;
+    margin: 0 3rem;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: .95rem;
+      font-weight: 500;
+      padding: .25rem;
+      transition: color .2s, transform .2s;
+      &:hover {
+        color: lighten($navbar-bg, 20%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+}
+
+.profile-cart {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  fa-icon {
+    color: #0b0b0b;
+    font-size: 15px;
+    transition: color .2s, transform .2s;
+    &:hover {
+      color: lighten(#000000, 30%) !important;
+      transform: scale(1.1);
+    }
+  }
+}

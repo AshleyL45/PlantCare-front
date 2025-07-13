@@ -1,0 +1,39 @@
+<div class="product-details">
+  <div class="image-wrapper">
+    <img [src]="imageUrl" [alt]="plantName" />
+  </div>
+
+  <div class="details">
+    <h1 class="plant-name">{{ plantName }}</h1>
+    <p class="latin-name">{{ plantLatinName }}</p>
+
+    <p class="price">\${{ priceMin }} – \${{ priceMax }}</p>
+
+    <div class="dropdowns">
+      <mat-form-field appearance="outline">
+        <mat-label>Size</mat-label>
+        <mat-select [(value)]="selectedSize">
+          <mat-option *ngFor="let s of sizes" [value]="s">{{ s }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Color</mat-label>
+        <mat-select [(value)]="selectedColor">
+          <mat-option *ngFor="let c of colors" [value]="c">{{ c }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="cart-controls">
+      <div class="quantity">
+        <button (click)="decrement()" [disabled]="quantity <= 1">–</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increment()">+</button>
+      </div>
+      <button class="btn-add" (click)="addToCart()">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

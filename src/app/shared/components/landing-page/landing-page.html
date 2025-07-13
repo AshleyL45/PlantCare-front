@@ -1,0 +1,11 @@
+<app-hero-carousel [images]="images"></app-hero-carousel>
+
+
+<section class="product-card-container">
+  <app-product-card
+    *ngFor="let p of products"
+    [product]="p"
+  >
+    <a [routerLink]="['/product', p.id]" class="overlay-link"></a>
+  </app-product-card>
+</section>

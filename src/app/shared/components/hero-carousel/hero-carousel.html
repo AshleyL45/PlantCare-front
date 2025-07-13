@@ -1,0 +1,13 @@
+<ngb-carousel
+  *ngIf="images?.length"
+  [showNavigationArrows]="true"
+  [showNavigationIndicators]="true"
+>
+  <ng-template ngbSlide *ngFor="let img of images; let i = index">
+    <img
+      [src]="img"
+      alt="Slide {{ i + 1 }}"
+      class="d-block w-100"
+    />
+  </ng-template>
+</ngb-carousel>

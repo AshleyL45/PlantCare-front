@@ -1,0 +1,24 @@
+<header class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="/assets/logo.png" alt="PlantCare Logo">
+    </a>
+  </div>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a routerLink="/">Accueil</a></li>
+      <li><a routerLink="/nos-plantes">Nos Plantes</a></li>
+      <li><a routerLink="/contact">Contactez-nous</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile-cart">
+    <a routerLink="/login" class="icon-button">
+      <fa-icon [icon]="faUser" size="2x" class="icon-white"></fa-icon>
+    </a>
+    <a routerLink="/cart" class="icon-button">
+      <fa-icon [icon]="faCart" size="2x" class="icon-white"></fa-icon>
+    </a>
+  </div>
+</header>

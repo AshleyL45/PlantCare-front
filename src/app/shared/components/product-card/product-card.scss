@@ -1,0 +1,93 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px;
+  width: 300px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-card.selected {
+  background-color: #e0f0d9;
+  transform: translateY(-4px);
+}
+
+.product-card.expanded {
+  min-height: 360px;
+  height: auto;
+  overflow: visible;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.product-card h4 {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+
+.details {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.details-button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0;
+  font-size: 0.9rem;
+  color: #007b33;
+}
+
+.details-button:hover {
+  opacity: 0.8;
+}
+
+.button {
+  margin-top: auto;
+  padding: 8px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  background-color: #69a36e;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #365a3b;
+}
+
+.product-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.product-card p[ngStyle] {
+  color: inherit;
+}
